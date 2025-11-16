@@ -10,21 +10,25 @@ export interface Experience {
 
 export const experienceData: Experience[] = [
   {
-    date: "Summer 2023",
-    title: "Research Intern",
-    company: "DeepMind",
+    date: "2025.06—Present",
+    title: "Research Assistant",
+    company: "Shanghai Jiao Tong University",
     description:
-      "Developed novel algorithms for causal structure learning in reinforcement learning settings",
-    advisor: "Peter Wang",
-    companyUrl: "https://deepmind.com",
+      "Conducting research on automated driving motion planning methods at the Artificial Intelligence Institute. Focusing on utilizing reinforcement learning (RL) and world models instead of Mixture-of-Experts (MoE) techniques in LLMs.",
   },
   {
-    date: "Summer 2022",
-    title: "Research Intern",
-    company: "Google Research",
+    date: "2024.02—2024.08",
+    title: "Algorithm Research Intern",
+    company: "SenseTime Research",
     description:
-      "Worked on improving robustness of large language models to distribution shifts",
-    manager: "Elise Brown",
-    companyUrl: "https://google.com",
+      "Built scenarios in the CARLA simulator to generate simulation data for the UniAD framework. Performed subsequent data processing and model training based on the generated simulation data.",
+    companyUrl: "https://www.sensetime.com",
+  },
+  {
+    date: "2024.01—2024.02",
+    title: "Short-term Intern",
+    company: "SAIC Volkswagen",
+    description:
+      "Gained an understanding of the EHH department's structure. Explored the applications and technical prospects of AI in intelligent driving.",
   },
 ];

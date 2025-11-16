@@ -10,6 +10,8 @@ import { ExperienceEntry } from "@/components/experience-entry";
 import { experienceData } from "@/data/experience";
 import { PortfolioEntry } from "@/components/portfolio-entry";
 import { portfolioData } from "@/data/portfolio";
+import { TimelineEntry } from "@/components/timeline-entry";
+import { timelineData } from "@/data/timeline";
 import { sectionOrder, Section } from "@/data/section-order";
 
 export default function Home() {
@@ -55,6 +57,25 @@ export default function Home() {
                             <div key={index}>
                               <NewsEntry news={news} />
                             </div>
+                          ))}
+                        </div>
+                      </section>
+                    )
+                  );
+                case Section.Timeline:
+                  return (
+                    timelineData.length > 0 && (
+                      <section key={sectionName}>
+                        <h2 className="font-serif text-zinc-700 mb-12 tracking-wide uppercase">
+                          Timeline
+                        </h2>
+                        <div>
+                          {timelineData.map((item, index) => (
+                            <TimelineEntry
+                              key={index}
+                              item={item}
+                              isLast={index === timelineData.length - 1}
+                            />
                           ))}
                         </div>
                       </section>

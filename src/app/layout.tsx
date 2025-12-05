@@ -28,8 +28,46 @@ const ptSerif = PT_Serif({
 export const metadata: Metadata = {
   title: customMetadata.title || aboutMe.name,
   description: customMetadata.description || aboutMe.description,
+  keywords: customMetadata.keywords,
+  authors: [{ name: aboutMe.name }],
+  creator: aboutMe.name,
+  publisher: aboutMe.name,
   icons: {
-    icon: "/favicon.ico",
+    icon: "/photo.png",
+    apple: "/photo.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://aowangg.github.io/",
+    siteName: aboutMe.name,
+    title: customMetadata.title || aboutMe.name,
+    description: customMetadata.description || aboutMe.description,
+    images: [
+      {
+        url: "/photo.png",
+        width: 800,
+        height: 600,
+        alt: aboutMe.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: customMetadata.title || aboutMe.name,
+    description: customMetadata.description || aboutMe.description,
+    images: ["/photo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -55,17 +93,6 @@ export default function RootLayout({
                   {aboutMe.secretDescription}
                 </p>
               )}
-            </div>
-            <div className="mb-4">
-              <p className="text-sm text-neutral-500 dark:text-neutral-500 justify">
-                Built with{" "}
-                <a
-                  href="https://github.com/tovacinni/research-website-template"
-                  className="underline hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors"
-                >
-                  research-website-template
-                </a>
-              </p>
             </div>
           </div>
         </footer>

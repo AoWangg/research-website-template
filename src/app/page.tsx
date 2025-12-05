@@ -13,6 +13,7 @@ import { portfolioData } from "@/data/portfolio";
 import { TimelineEntry } from "@/components/timeline-entry";
 import { timelineData } from "@/data/timeline";
 import { sectionOrder, Section } from "@/data/section-order";
+import { DrivingCar } from "@/components/driving-car";
 
 export default function Home() {
   return (
@@ -40,6 +41,9 @@ export default function Home() {
                 />
               </section>
             )}
+
+            {/* Driving car animation */}
+            <DrivingCar />
 
             {/* Map through sectionOrder to render sections in correct order */}
             {sectionOrder.map((sectionName) => {

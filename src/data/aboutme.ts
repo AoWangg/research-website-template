@@ -19,12 +19,12 @@ export interface AboutMe {
 
 export const aboutMe: AboutMe = {
   name: "Zhiwen Chen",
-  title: "Ph.D. Candidate",
-  institution: "Tongji University",
+  title: "Research Assistant, SJTU\nUniAD Algo Intern, SenseTime\nB.Eng. Vehicle Engineering, Tongji",
+  institution: "",
   // Note that links work in the description
   description:
-    "I'm a Ph.D. candidate at <a href='https://www.tongji.edu.cn'>Tongji University</a> working in the field of Vehicle Engineering. My research focuses on autonomous driving, particularly on developing reinforcement learning-based motion planning methods and intelligent decision-making systems.",
-  email: "2411451@tongji.edu.cn",
+    "Hi! <span class='wave'>👋</span> I'm Zhiwen Chen, currently a Research Assistant at <a href='https://www.sjtu.edu.cn'>Shanghai Jiao Tong University</a> and an incoming Ph.D. student at the <a href='https://hkust.edu.hk'>Hong Kong University of Science and Technology</a> (starting January 2026). I received my B.Eng. 🎓 in Vehicle Engineering from <a href='https://www.tongji.edu.cn'>Tongji University</a>. <br><br>My research sits at the intersection of 🚗 <strong>Autonomous Driving</strong>, 🤖 <strong>Reinforcement Learning</strong>, and 🔮 <strong>Large Vision-Language Models</strong>. I focus on RL- and LLM-driven end-to-end driving and trajectory planning, aiming to build agentic driving systems that coordinate multiple planners and make human-like decisions in complex urban environments. 🏙️",
+  email: "zhiwen_chen725@163.com",
   imageUrl: "/photo.png",
   institutionUrl: "https://www.tongji.edu.cn",
   // altName: "陈志文",

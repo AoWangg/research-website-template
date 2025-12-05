@@ -33,9 +33,33 @@ export function PublicationEntry({
               </p>
             </div>
           )}
+          {publication.status && (
+            <div className="px-2 py-1 bg-blue-50 rounded-md border border-blue-100">
+              <p className="text-xs text-blue-700 font-medium">
+                {publication.status}
+              </p>
+            </div>
+          )}
         </div>
         <h3 className="font-serif text-md mb-3">{publication.title}</h3>
-        <p className="text-sm text-zinc-600 mb-4">{publication.authors}</p>
+
+        {/* Collaborating Institutions */}
+        {publication.institutions && publication.institutions.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-3">
+            {publication.institutions.map((institution, index) => (
+              <span
+                key={index}
+                className="px-3 py-1.5 text-xs font-medium bg-gradient-to-r from-orange-50 to-amber-50 text-orange-700 rounded-full border border-orange-200 shadow-sm"
+              >
+                🏢 {institution}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {publication.authors && (
+          <p className="text-sm text-zinc-600 mb-4">{publication.authors}</p>
+        )}
         <div className="flex flex-row gap-6">
           {publication.paperUrl && (
             <a

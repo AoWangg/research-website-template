@@ -32,14 +32,11 @@ export const metadata: Metadata = {
   authors: [{ name: aboutMe.name }],
   creator: aboutMe.name,
   publisher: aboutMe.name,
-  icons: {
-    icon: "/photo.png",
-    apple: "/photo.png",
-  },
+  metadataBase: new URL("https://zhiwenchen.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://aowangg.github.io/",
+    url: "https://zhiwenchen.com",
     siteName: aboutMe.name,
     title: customMetadata.title || aboutMe.name,
     description: customMetadata.description || aboutMe.description,
